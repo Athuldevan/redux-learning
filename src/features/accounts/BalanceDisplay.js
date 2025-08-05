@@ -1,12 +1,12 @@
-function formatCurrency(value) {
+function formatCurrency(balance) {
   return new Intl.NumberFormat("en", {
     style: "currency",
     currency: "USD",
-  }).format(value);
+  }).format(balance);
 }
 
-function BalanceDisplay() {
-  return <div className="balance">{formatCurrency(123456)}</div>;
+function BalanceDisplay({ balance }) {
+  return <div className="balance">{formatCurrency(balance)}</div>;
 }
 
 export default BalanceDisplay;
